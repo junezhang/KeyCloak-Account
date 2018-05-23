@@ -103,6 +103,16 @@
 	div.content-desktop{
 		display: none;
 	}
+	.card-pf {
+		background: #fff;
+		border-top: 2px solid transparent;
+		box-shadow: 0 1px 1px rgba(3,3,3,.175);
+		margin: 0 -50px 20px;
+		padding: 0 20px;
+	}
+	.card-title{
+		margin-left: 0;
+	}
 }
 @media screen and (min-width: 769px) {
 	div.content-mobile{
