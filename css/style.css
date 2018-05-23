@@ -62,3 +62,78 @@
 	color: #666;
 	margin-top: 5px;
 }
+
+/*------Authenticator-------*/
+.m-l-small{
+	margin-left: 8px;
+}
+.list-authenticator{
+	margin:0 0 30px 0;
+}
+.list-authenticator-item{
+	border-color:#ededed;
+	border-left-color:#fff;
+	border-right-color:#fff;
+	border-style:solid;
+	border-width:1px;
+	border-top:none;
+}
+.list-pf-icon-large{
+	font-size:1.8em;
+	height:20px;
+	line-height:30px;
+	width:10px;
+}
+.breadcrumb{
+	padding-left: 20;
+}
+.card-authenticator-body{
+	margin-top: 20px;
+}
+.card-container{
+	display: flex;
+	justify-content:center;
+	margin-left: 10px;
+	flex-direction: column;
+}
+.card-container > div {
+	 text-align: center;
+}
+@media screen and (max-width: 768px){
+	div.content-desktop{
+		display: none;
+	}
+}
+@media screen and (min-width: 769px) {
+	div.content-mobile{
+		display: none;
+	}
+}
+.key-group{
+	position: relative;
+	display: table;
+	border-collapse: separate;
+}
+.key-box{
+	height: auto;
+	border-width: 1px;
+	background-color: #fdf2e5;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	text-align: center;
+	padding: 3px;
+	vertical-align: top;
+	display: table-cell;
+}
+.key-group-btn{
+	position: relative;
+	font-size: 0;
+	white-space: nowrap;
+	width: 1%;
+	vertical-align: top;
+	display: table-cell;
+	height: 28px;
+}
+.link-right{
+	text-align: right;
+}
