@@ -64,9 +64,7 @@
 }
 
 /*------Authenticator-------*/
-.m-l-small {
-	margin-left: 8px;
-}
+
 .list-authenticator {
 	margin: 0 0 30px 0;
 }
@@ -91,45 +89,75 @@
 	margin-top: 20px;
 }
 .card-container {
-	display: flex;
-	justify-content: center;
+	display: inline-flex;
 	margin-left: 10px;
 	flex-direction: column;
-}
-.card-container > div {
-	text-align: center;
-}
-.key-group {
-	position: relative;
-	display: table;
-	border-collapse: separate;
-}
-.key-box {
-	height: auto;
-	border-width: 1px;
-	background-color: #fdf2e5;
-	border: 1px solid #ccc;
-	border-radius: 1px;
-	text-align: center;
-	padding: 3px;
-	vertical-align: top;
-	display: table-cell;
-}
-.key-group-btn {
-	font-size: 0;
+	align-items: center;
 	white-space: nowrap;
-	width: 1%;
-	vertical-align: top;
-	display: table-cell;
-	padding: 0px;
+}
+.form-control[disabled] {
+	background-color: #fdf2e5;
+	text-align: center;
+	color: #333333;
 }
 .link-right {
 	text-align: right;
 	margin-top: 6px;
 	margin-bottom: 10px;
 }
+.backup-codes-box {
+	background-color: #fdf2e5;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-top: 8px;
+	max-width: 320px;
+}
+.backup-codes-box-header {
+	margin-top: 12px;
+	border-bottom: 1px solid lightgrey;
+	border-bottom-style: dotted;
+}
+.header-text {
+	margin-left: 24px;
+	margin-bottom: 8px;
+}
+.backup-codes-box-body {
+	font-size: 14px;
+	margin-left: 24px;
+	margin-top: 12px;
+}
+.top-margin-m {
+	margin-top: 16px;
+}
+.top-margin-l {
+	margin-top: 32px;
+}
+.left-padding-m {
+	padding-left: 16px;
+}
+.backup-codes-list {
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	counter-reset: list;
+	list-style: none;
+	padding-left: 0px;
+}
+.backup-codes-list > li:before {
+	content: counter(list)". ";
+	color: lightgrey;
+	counter-increment: list;
+	display: inline-block;
+	width: 28px;
+	margin-left: -16px;
+	margin-right: 12px;
+	text-align: right;
+}
 
 /*==================Responsive Style==================*/
+
 /*Mobile*/
 @media screen and (max-width: 767px) {
 	div.content-desktop {
