@@ -62,3 +62,64 @@
 	color: #666;
 	margin-top: 5px;
 }
+/*----------linked-aacount-----------*/
+.m-b-l{
+	margin-bottom: 40px;
+}
+.linked-account-list .list-view-pf-description{
+	width: 50%
+}
+.linked-account-list .list-view-pf-additional-info{
+	width: 50%;
+}
+.linked-account-list.list-view-pf .list-group-item-heading {
+    -ms-flex: 1 0 calc(50% - 20px);
+    flex: 1 0 calc(45% - 20px);
+}
+.linked-account-list.list-view-pf .list-group-item-text {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    float: left;
+    margin: 0 40px 0 0;
+    width: calc(55% - 40px);
+}
+.linked-account-list .fa-user{
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+	.linked-account-list .list-view-pf-description{
+	width: 100%
+	}
+    .linked-account-list .list-view-pf-additional-info{
+	margin-top: 40px;
+	width: 100%;
+	}
+	.m-b-l {
+	    margin-bottom: 20px;
+	}
+
+	.container-cards-pf{
+		padding: 0;
+		margin: 0;
+	}
+
+	.cards-pf .row-cards-pf {
+    padding: 0 0px;
+	}
+	.card-title{
+		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: 50px;
+	}
+	.card-pf{
+		margin: 0 -10px 12px;
+	}
+	.detail-description{
+		margin-bottom: 20px;
+	}
+	.list-view-pf .list-group-item{
+		padding: 0;
+	}
+}

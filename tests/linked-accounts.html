@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9 layout-pf layout-pf-fixed"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us" class="layout-pf layout-pf-fixed">
+<!--<![endif]-->
+<head>
+  <title>Keycloak</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="../css/patternfly.min.css" >
+  <link rel="stylesheet" href="../css/patternfly-additions.min.css" >
+
+  <link href="tests.css" rel="stylesheet" media="screen, print">
+  <link rel="stylesheet" href="../css/style.css" >
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+  <script src="../js/patternfly.min.js"></script>
+</head>
+<div class="toast-notifications-list-pf">
+  <div class="toast-pf alert alert-warning alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+      <span class="pficon pficon-close"></span>
+    </button>
+    <span class="pficon pficon-warning-triangle-o"></span>
+    These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+  </div>
+</div>
+
+<body class="cards-pf">
+
+
+
+
+  <nav class="navbar navbar-pf-vertical">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img class="navbar-brand-icon" src="..//img/logo-alt.svg" alt=""/><img class="navbar-brand-name" src="..//img/brand-alt.svg" alt="PatternFly Enterprise Application" />
+      </a>
+
+    </div>
+    <nav class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
+
+        <li class="dropdown">
+          <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span title="Help" class="fa pficon-help"></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#0">Help</a></li>
+            <li><a href="#0">About</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span title="Username" class="fa pficon-user"></span>
+            Brian Johnson <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#0">Preferences</a></li>
+            <li><a href="#0">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </nav> <!--/.navbar-->
+
+
+  <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus
+
+  nav-pf-vertical-collapsible-menus
+
+  ">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#0">
+        <span class="fa fa-dashboard" data-toggle="tooltip" title="Dashboard"></span>
+        <span class="list-group-item-value">Dashboard</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#0">
+        <span class="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
+        <span class="list-group-item-value">Dolor</span>
+
+      </a>
+    </li>
+    <li class="list-group-item active secondary-nav-item-pf" data-target="#ipsum-secondary">
+      <a href="#0">
+        <span class="fa fa-space-shuttle" data-toggle="tooltip" title="Ipsum"></span>
+        <span class="list-group-item-value">Ipsum</span>
+      </a>
+
+      <div id="-secondary" class="nav-pf-secondary-nav">
+        <div class="nav-item-pf-header">
+          <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+          <span>Ipsum</span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item active tertiary-nav-item-pf" data-target="#ipsum-intellegam-tertiary">
+            <a href="#0">
+              <span class="list-group-item-value">Intellegam</span>
+            </a>
+
+            <div id="compute-containers-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Intellegam</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item active">
+                  <a href="#0">
+                    <span id="compute-containers-users-nav-item" class="list-group-item-value">Recteque</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span id="compute-containers-groups-nav-item" class="list-group-item-value">Suavitate</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span id="compute-containers-roles-nav-item" class="list-group-item-value">Vituperatoribus</span>
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+          <li class="list-group-item tertiary-nav-item-pf" data-target="#ipsum-copiosae-tertiary">
+            <a href="#0">
+              <span class="list-group-item-value">Copiosae</span>
+            </a>
+
+            <div id="compute-infrastructure-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Copiosae</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Exerci</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Quaeque</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Utroque</span>
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+          <li class="list-group-item tertiary-nav-item-pf" data-target="#ipsum-patrioque-tertiary">
+            <a href="#0" >
+              <span class="list-group-item-value">Patrioque</span>
+            </a>
+
+            <div id="compute-clouds-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Patrioque</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Novum</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Pericula</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Gubergren</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">Accumsan</span>
+
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </li>
+    <li class="list-group-item secondary-nav-item-pf" data-target="#amet-secondary">
+      <a href="#0">
+        <span class="fa fa-paper-plane" data-toggle="tooltip" title="Amet"></span>
+        <span class="list-group-item-value">Amet</span>
+      </a>
+
+      <div id="amet-secondary" class="nav-pf-secondary-nav">
+        <div class="nav-item-pf-header">
+          <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+          <span>Amet</span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-detracto-tertiary">
+            <a href="#0">
+              <span class="list-group-item-value">Detracto Suscipiantur</span>
+
+            </a>
+
+            <div id="amet-detracto-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Detracto</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Delicatissimi</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Aliquam</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Principes</span>
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+          <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-mediocrem-tertiary">
+            <a href="#0">
+              <span class="list-group-item-value">Mediocrem</span>
+
+            </a>
+
+            <div id="amet-mediocrem-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Mediocrem</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Convenire</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Nonumy</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Deserunt</span>
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+          <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-corrumpit-tertiary">
+            <a href="#0">
+              <span class="list-group-item-value">Corrumpit Cupidatat Proident Deserunt</span>
+
+            </a>
+
+            <div id="amet-corrumpit-tertiary" class="nav-pf-tertiary-nav">
+              <div class="nav-item-pf-header">
+                <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+                <span>Corrumpit</span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Aeque</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Delenit</span>
+
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#0">
+                    <span class="list-group-item-value">Qualisque</span>
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </li>
+
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">Urbanitas Habitant Morbi Tristique</span>
+
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </li>
+    <li class="list-group-item">
+      <a href="#0">
+        <span class="fa fa-graduation-cap" data-toggle="tooltip" title="Adipscing"></span>
+        <span class="list-group-item-value">Adipscing</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#0">
+        <span class="fa fa-gamepad" data-toggle="tooltip" title="Lorem"></span>
+        <span class="list-group-item-value">Lorem</span>
+      </a>
+    </li>
+
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
+      <a href="#0">
+        <span class="pficon pficon-user" data-toggle="tooltip" title="" data-original-title="User"></span>
+        <span class="list-group-item-value">User</span>
+      </a>
+      <div id="user-secondary" class="nav-pf-secondary-nav">
+        <div class="nav-item-pf-header">
+          <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+          <span>User</span>
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">Preferences</span>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
+      <a href="#0">
+        <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Help"></span>
+        <span class="list-group-item-value">Help</span>
+      </a>
+      <div id="help-secondary" class="nav-pf-secondary-nav">
+        <div class="nav-item-pf-header">
+          <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+          <span>Help</span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">Help</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="#0">
+              <span class="list-group-item-value">About</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+
+<!--content-->
+
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
+  <h1 class="card-title">Linked Accounts</h1>
+  <div class="row row-cards-pf">
+    <div class="col-md-12">
+      <div class="card-pf card-pf-utilization">
+
+        <h2 class="card-pf-title m-b-l">
+          Authorized Provider
+        </h2>
+        <div class="row">
+          <div class="col-md-3">
+            <p class="detail-description">Authorized Providers linked with your account.</p>
+          </div>
+          <div class="col-md-9">
+            <div id="pf-list-standard" class="list-group list-view-pf list-view-pf-view linked-account-list">
+
+              <div class="list-group-item">
+                <div class="list-view-pf-actions">
+                  <a href="#" data-toggle="modal" data-target="#myModal">Remove</a>
+                </div>
+                <div class="list-view-pf-main-info">
+                  <div class="list-view-pf-left">
+                    <span class="fa fa-google list-view-pf-icon-sm"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description">
+                      <div class="list-group-item-heading">
+                        Google
+                      </div>
+                      <div class="list-group-item-text">
+                        <span class="label label-primary">Social login</span>
+                      </div>
+                    </div>
+                    <div class="list-view-pf-additional-info">
+                      <span class="fa fa-user"> </span>  zhutaoredhat
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /row -->
+
+
+  <div class="row row-cards-pf">
+    <div class="col-md-12">
+      <div class="card-pf card-pf-utilization">
+        <h2 class="card-pf-title m-b-l">
+          Identity Provider
+        </h2>
+        <div class="row">
+          <div class="col-md-3">
+            <p class="detail-description">To link your account with identity providers you have configured.</p>
+          </div>
+          <div class="col-md-9">
+            <div id="pf-list-standard" class="list-group list-view-pf list-view-pf-view linked-account-list">
+
+              <div class="list-group-item">
+                <div class="list-view-pf-actions">
+                  <a href="#">Link</a>
+                </div>
+                <div class="list-view-pf-main-info">
+                  <div class="list-view-pf-left">
+                    <span class="fa fa-facebook list-view-pf-icon-sm"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description">
+                      <div class="list-group-item-heading">
+                        Facebook
+                      </div>
+                      <div class="list-group-item-text">
+                        <span class="label label-primary">Social login</span>
+                      </div>
+                    </div>
+                    <div class="list-view-pf-additional-info">
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class="list-view-pf-actions">
+                  <a href="#">Link</a>
+                </div>
+                <div class="list-view-pf-main-info">
+                  <div class="list-view-pf-left">
+                    <span class="fa fa-cube list-view-pf-icon-sm"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description">
+                      <div class="list-group-item-heading">
+                        OpenID Connect
+                      </div>
+                      <div class="list-group-item-text">
+                        <span class="label label-success">User defined</span>
+                      </div>
+                    </div>
+                    <div class="list-view-pf-additional-info">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+  </div>
+</div><!-- /row -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Remove Access</h4>
+      </div>
+      <div class="modal-body">
+        KeyCloak will no longer have permission to your account. Are you sure to remove access?<br>
+You will need to grant access again, if you want to use this app account.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
+
+
+</div>
+<script>
+  $(document).ready(function() {
+  // matchHeight the contents of each .card-pf and then the .card-pf itself
+  $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+  $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+  $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+  $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+
+  // Initialize the vertical navigation
+  $().setupVerticalNavigation(true);
+});
+</script>
+
+<script>
+  const currentUrl = new URL(window.location.href);
+  const currentEnvironment = currentUrl.searchParams.get('environment');
+
+  if (currentEnvironment === 'regressions') {
+    let verticalNavEl = document.querySelector('div.nav-pf-vertical');
+    let ipsumEl = document.querySelector('[data-target="#ipsum-secondary"]');
+    let tertiaryNavItemEl = document.querySelector('.list-group-item.active.tertiary-nav-item-pf')
+    verticalNavEl.className = `${verticalNavEl.className} nav-pf-vertical-with-submenus hidden-icons-pf hover-secondary-nav-pf hover-tertiary-nav-pf`;
+    ipsumEl.className = `${ipsumEl.className} is-hover`;
+    tertiaryNavItemEl.className = `${tertiaryNavItemEl.className} is-hover`;
+  }
+</script>
+<script>
+  $(document).ready(function () {
+  // Row Checkbox Selection
+  $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
+    if ($(this).is(":checked")) {
+      $(this).closest('.list-group-item').addClass("active");
+    } else {
+      $(this).closest('.list-group-item').removeClass("active");
+    }
+  });
+  // toggle dropdown menu
+  $("#pf-list-simple-expansion .list-view-pf-actions").on('show.bs.dropdown', function () {
+    var $this = $(this);
+    var $dropdown = $this.find('.dropdown');
+    var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+    $dropdown.toggleClass('dropup', space < 10);
+  });
+
+  // click the list-view heading then expand a row
+  $("#pf-list-simple-expansion .list-group-item-header").click(function(event){
+    if(!$(event.target).is("button, a, input, .fa-ellipsis-v")){
+      $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+      .end().parent().toggleClass("list-view-pf-expand-active")
+      .find(".list-group-item-container").toggleClass("hidden");
+    } else {
+    }
+  })
+
+  // click the close button, hide the expand row and remove the active status
+  $("#pf-list-simple-expansion .list-group-item-container .close").on("click", function (){
+    $(this).parent().addClass("hidden")
+    .parent().removeClass("list-view-pf-expand-active")
+    .find(".fa-angle-right").removeClass("fa-angle-down");
+  })
+
+});
+</script>
+
+</body>
+</html>
