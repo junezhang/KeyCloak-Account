@@ -149,14 +149,14 @@
 	font-size: 16px;
 	font-weight: 600;
 }
-#AuthenticatorLabel {
+.authenticator-label {
 	font-size: 75%;
 	margin-left: 4px;
 }
-#AuthenticatorEntry {
+.authenticator-entry {
 	font-size: 14px;
 }
-.AuthenticatorPhoneNumber {
+.authenticator-phone {
 	font-size: 16px;
 	font-weight: normal;
 }
@@ -196,6 +196,10 @@
 	margin-top: 12px;
 	border-bottom: 1px solid lightgrey;
 	border-bottom-style: dotted;
+}
+.generate-annotation {
+	max-width: 320px;
+	margin-top: 12px;
 }
 .header-text {
 	margin-left: 24px;
@@ -237,7 +241,7 @@
 	width: 100%;
 	text-align: left;
 }
-#dropdownCaret {
+.dropdown-caret {
 	float: right;
 	margin-top: 5px;
 }
