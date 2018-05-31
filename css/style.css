@@ -69,13 +69,37 @@
 	margin: 0 0 30px 0;
 }
 .list-authenticator-item {
-	border-width: 0px;
+	border-color: #ededed;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	border-top: none;
 }
 .list-pf-icon-large {
 	font-size: 1.8em;
 	height: 20px;
 	line-height: 30px;
 	width: 10px;
+	align-items: normal;
+}
+.list-pf {
+	border-bottom: 0;
+}
+.list-pf-title {
+	font-size: 16px;
+	font-weight: 600;
+}
+#AuthenticatorLabel {
+	font-size: 75%;
+	margin-left: 4px;
+}
+#AuthenticatorEntry {
+	font-size: 14px;
+}
+.AuthenticatorPhoneNumber {
+	font-size: 16px;
+	font-weight: normal;
 }
 .breadcrumb {
 	padding-left: 20px;
@@ -205,5 +229,8 @@
 @media screen and (min-width: 768px) {
 	div.content-mobile {
 		display: none;
+	}
+	.detail-description {
+		margin-bottom: 40px;
 	}
 }
