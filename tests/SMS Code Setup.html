@@ -381,67 +381,59 @@
     </div>
 
     <!--Main Area Begin-->
+
     <div class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
       <ol class="breadcrumb">
         <li>Account Security</li>
-        <li><a href="#">Authenticator</a></li>
-        <li><b>Backup Codes Setup</b></li>
+        <li>
+          <a href="#">Authenticator</a>
+        </li>
+        <li><b>Mobile Authenticator Setup</b></li>
       </ol>
       <!--Breadcrumb-->
+
+      <!--Card 1-->
       <div class="row row-cards-pf">
         <div class="col-md-12">
           <div class="card-pf card-pf-view">
             <div class="card-pf-body">
-              <h2>Backup Codes Setup</h2>
+              <h2>SMS Code Setup</h2>
               <div class="row card-authenticator-body">
                 <div class="col-xs-12 col-sm-12 col-md-3">
-                  <p>If you lose access to your phone, you can still log into your account through backup codes. Keep them somewhere safe and accessible.</p>
-                </div>
-                <!--Description-->
+                  <p>Enter your phone number and a verification code will be sent to your phone.</p>
+                </div><!--Description-->
+
                 <div class="col-xs-12 col-sm-12 col-md-5">
-                  <div class="backup-codes-box">
-                    <div class="backup-codes-box-header">
-                      <div class="header-text">
-                        <b>Realm:</b> Admin
-                      </div>
-                    </div>
-                    <!--Backup Codes Box Header-->
-                    <div class="backup-codes-box-body">
-                      <ol class="backup-codes-list">
-                        <li>7890 7327</li>
-                        <li>0000 7347</li>
-                        <li>7890 1227</li>
-                        <li>7870 9065</li>
-                        <li>1234 1232</li>
-                        <li>3232 2323</li>
-                        <li>7890 7327</li>
-                        <li>0000 7347</li>
-                        <li>7890 1227</li>
-                        <li>7870 9065</li>
-                        <li>1234 1232</li>
-                        <li>3232 2323</li>
-                      </ol>
+                  <div class="form-group">
+                    <label>Choose your country</label>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle sms-dropdown" type="button" id="dropdownMenu-lan" data-toggle="dropdown">
+                        China +86
+                        <span class="caret" id="dropdownCaret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu-lan">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Argentina +54</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brazil +55</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Canada +1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">China +86</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">United States +1</a></li>
+                      </ul>
                     </div>
                   </div>
-                  <!--Backup Codes Box Body-->
-                  <div class="top-margin-m">
-                    <button type="button" class="btn btn-default">Download</button>
-                    <button type="button" class="btn btn-default">Print</button>
-                    <button type="button" class="btn btn-default">Copy</button>
+                  <div class="form-group">
+                    <label for="InputPhoneNumber">Enter your phone number</label>
+                    <input class="form-control" id="InputPhoneNumber">
                   </div>
-                  <!--Buttons Group-->
-                  <div class="top-margin-m">
-                    <ul class="left-padding-m">
-                      <li>Each backup code can be used once.</li>
-                      <li>These codes were generated on Jan 11, 2018.</li>
-                    </ul>
+                  <button class="btn btn-default">Send verification Code</button>
+                  <hr>
+                  <div class="form-group">
+                    <label for="EnterVerificationCode">Enter your phone number</label>
+                    <input class="form-control" id="EnterVerificationCode">
                   </div>
-                  <!--Annotations-->
-                  <div class="top-margin-l">
-                    <a href="">&lt Back to Authenticator Page</a>
-                  </div>
-                  <!--Back Link-->
-                </div>
+                  <button class="btn btn-primary">Finish</button>
+                  <button class="btn btn-default">Cancel</button>
+                </div><!--Form Area-->
+
               </div>
             </div>
           </div>
@@ -459,7 +451,7 @@
 
       // Initialize the vertical navigation
       $().setupVerticalNavigation(true);
-    });
+      });
     </script>
 
     <script>

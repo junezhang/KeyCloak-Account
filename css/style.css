@@ -69,12 +69,7 @@
 	margin: 0 0 30px 0;
 }
 .list-authenticator-item {
-	border-color: #ededed;
-	border-left-color: #fff;
-	border-right-color: #fff;
-	border-style: solid;
-	border-width: 1px;
-	border-top: none;
+	border-width: 0px;
 }
 .list-pf-icon-large {
 	font-size: 1.8em;
@@ -155,6 +150,14 @@
 	margin-right: 12px;
 	text-align: right;
 }
+.sms-dropdown {
+	width: 100%;
+	text-align: left;
+}
+#dropdownCaret {
+	float: right;
+	margin-top: 5px;
+}
 
 /*==================Responsive Style==================*/
 
@@ -167,8 +170,28 @@
 		background: #fff;
 		border-top: 2px solid transparent;
 		box-shadow: 0 1px 1px rgba(3,3,3,.175);
-		margin: -20px -50px 20px;
-		padding: 0 20px;
+		margin: 0 -50px 20px;
+		padding: 0;
+	}
+	.list-view-pf-main-info {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.card-pf-title {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.detail-description {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.card-header {
+		border-bottom: 1px solid #ededed;
+		padding-bottom: 8px;
+	}
+	.list-pf {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 	.card-title {
 		margin-left: 0;
